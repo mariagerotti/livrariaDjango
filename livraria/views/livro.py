@@ -1,8 +1,11 @@
 from rest_framework.viewsets import ModelViewSet
 
 from livraria.models import Livro
-from livraria.serializers import  LivroDetailSerializer,LivroListSerializer, LivroSerializer
-
+from livraria.serializers import (
+    LivroDetailSerializer,
+    LivroListSerializer,
+    LivroSerializer,
+)
 
 
 class LivroViewSet(ModelViewSet):
