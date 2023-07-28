@@ -1,4 +1,8 @@
 from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SlugRelatedField
+
+from uploader.models import Image
+from uploader.serializers import ImageSerializer
 
 from livraria.models import Livro
 
