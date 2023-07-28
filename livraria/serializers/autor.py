@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from models.autor import Autor
+from livraria.models import Autor
 
 class AutorSerializer(ModelSerializer):
     class Meta:

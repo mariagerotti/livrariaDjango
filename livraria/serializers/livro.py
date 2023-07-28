@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from models.livro import Livro
+from livraria.models import Livro
 
 class LivroDetailSerializer(ModelSerializer):
     class Meta:
