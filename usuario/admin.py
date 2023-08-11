@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
+from livraria.models import Compra
 
+admin.site.register(Compra)
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from .models import Usuario
 
@@ -59,6 +61,12 @@ class CustomUserAdmin(UserAdmin):
             },
         ),
     )
+class ItensCompraInline(admin.TabularInline):
+    model = ItensCompra
+
+@admin.register(Compra)
+class CompraAdmin(admin.ModelAdmin):
+    inlines = [ItensCompraInline]
     search_fields = ("email",)
     ordering = ("email",)
     readonly_fields = ["date_joined", "last_login"]
